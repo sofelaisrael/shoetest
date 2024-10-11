@@ -41,10 +41,45 @@ const Home = () => {
         })
     })
 
+
+    
+    /*useEffect(() => {
+        let tl = gsap.timeline({ repeat: -1, defaults: { duration: 2, delay: 1, ease: 'expo.inOut' } })
+        tl.to('.marquee-track', { yPercent: -100 })
+        tl.to('.marquee-track', { yPercent: -200 })
+        tl.to('.marquee-track', { yPercent: -300 })
+    })
+
+    useEffect(() => {
+        gsap.set('.wrapper', { xPercent: -50, yPercent: -50 })
+        gsap.set('#no02', { y: 0 })
+        gsap.set('#no03', { y: 20 })
+
+        var boxWidth = 250, totalWidth = boxWidth * 7, no01 = document.querySelectorAll('#no01 .box'), no02 = document.querySelectorAll('#no02 .box'), no03 = document.querySelectorAll('#no03 .box'), dirLeft = '+=' + totalWidth, dirRight = '-=' + totalWidth
+
+        var mod = gsap.utils.wrap(0, totalWidth)
+
+        const marquee = (which, time, dir) => {
+            gsap.set(which, {
+                x: (i) => { return i * boxWidth }
+            })
+            var action = gsap.timeline().to(which, {
+                x: dir, modifiers: {
+                    x: x => mod(parseFloat(x)) + 'px'
+                },
+                duration: time,
+                ease: 'none',
+                repeat: -1
+            })
+            return action
+        }
+        var master = gsap.timeline().add(marquee(no01, 15, dirLeft), 1).add(marquee(no02, 20, dirLeft), 2).add(marquee(no03, 20, dirRight), 3)
+    })*/
+
     return (
         <div>
             {/* <Cart /> */}
-            <div className="grid gridows-2 max-lg:grid-rws-6 grid-cols-5 max-lg:grid-cols-3 p-10 max-md:px-5 max-sm:px-0 border pt-20">
+            <div className="grid gridows-2 max-lg:grid-rws-6 grid-cols-5 max-lg:grid-cols-3 p-10 max-md:px-5 max-sm:px-0 border max-sm:pb-5 pt-20">
                 <div className="row-span-4 col-span-3 h-[500px] max-lg:h-ful p-2 max-lg:row-span-2 max-md:h-[300px]">
                     <div className="flex justify-center items-start bg-[#333] relative w-full overflow-hidden  h-full rounded-lg flex-col con">
                         <span className="text-white font-bold text-[32px] px-10 z-20" >
@@ -57,6 +92,7 @@ const Home = () => {
                         <img className=' h-full absolute right-0 top-0 -rotate-12 -translate-y-0 para  hover:rotate-0' src={Puma} alt="" />
                     </div>
                 </div>
+
                 <div className="row-span-1 max-lg:row-span-2 col-span-2 max-lg:col-span-3 p-2 h-[250px] max-lg:h-[300px] max-md:h-[250px]">
                     <div className="bg- w-full h-full overflow-hidden rounded-lg bg-[#6B522E] relative con flex-col flex justify-center items-start">
                         <span className="text-white font-bold text-[32px] px-10 z-20 w-[70%] max-sm:w-full" >
@@ -86,18 +122,18 @@ const Home = () => {
             </div>
 
             <div className="grid pt-20 grid-cols-3 max-lg:grid-cols-1 gap-10 px-20 max-lg:px-10 max-sm:px-5 max-md:pt-10 max-sm:pt-5">
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales1} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative   overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
+                    <img src={sales1} alt="" className="absolute -z-20 top-0  left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales2} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
+                    <img src={sales2} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-black">
-                    <img src={sales3} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-black">
+                    <img src={sales3} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
@@ -132,18 +168,18 @@ const Home = () => {
             </div>
 
             <div className="grid pt-20 grid-cols-3 max-lg:grid-cols-1 gap-10 px-20  max-md:pt-10 pb-10 max-sm:py-5 max-lg:px-10 max-sm:px-5">
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales4} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
+                    <img src={sales4} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales5} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
+                    <img src={sales5} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
-                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-lg:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales6} alt="" className="absolute -z-20 top-0 left-0 object-cover h-[100%]" />
+                <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
+                    <img src={sales6} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
