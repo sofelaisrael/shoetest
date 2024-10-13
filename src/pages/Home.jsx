@@ -31,8 +31,6 @@ const Home = () => {
         // let dark = document.querySelector('.dar')
         window.addEventListener('scroll', function () {
             bg.forEach((b, index) => {
-                console.log(b.getBoundingClientRect());
-
                 let val = this.window.scrollY
                 b.style.top = val * 0.5 * (index - 1.5) / 2 + 'px'
                 b.style.transform = `rotate(-${val * 0.03 + 12}deg)`
@@ -40,6 +38,8 @@ const Home = () => {
             //   dark.style.top = val * 0.25 + 'px'
         })
     })
+   // console.log(window.innerWidth);
+    
 
 
     
@@ -123,17 +123,17 @@ const Home = () => {
 
             <div className="grid pt-20 grid-cols-3 max-lg:grid-cols-1 gap-10 px-20 max-lg:px-10 max-sm:px-5 max-md:pt-10 max-sm:pt-5">
                 <div className="flex flex-col justify-center item relative   overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales1} alt="" className="absolute -z-20 top-0  left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales1} alt="" className="absolute -z-20 top-0  left-0 object-cover max-sm:h-[100%] lg:h-[100%] lg:w-full" />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
                 <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales2} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales2} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%]  lg:h-[100%] lg:w-full" />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
                 <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-black">
-                    <img src={sales3} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales3} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] lg:w-full " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
@@ -169,17 +169,17 @@ const Home = () => {
 
             <div className="grid pt-20 grid-cols-3 max-lg:grid-cols-1 gap-10 px-20  max-md:pt-10 pb-10 max-sm:py-5 max-lg:px-10 max-sm:px-5">
                 <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales4} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales4} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] lg:w-full " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
                 <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales5} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales5} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] lg:w-full " />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
                 <div className="flex flex-col justify-center item relative  overflow-hidden items-center border h-[250px] max-md:h-[400px] max-sm:h-[300px] col-span-1 text-white">
-                    <img src={sales6} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%] lg:h-[100%] max-md:w-[100%] " />
+                    <img src={sales6} alt="" className="absolute -z-20 top-0 left-0 object-cover max-sm:h-[100%]  lg:h-[100%] lg:w-full" />
                     <span className="text-[20px]">sale 50% off</span>
                     <span className="font-bold text-[24px] max-lg:text-[40px] max-sm:text-[32px] uppercase">New Arrivals</span>
                 </div>
