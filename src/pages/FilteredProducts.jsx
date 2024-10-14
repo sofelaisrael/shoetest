@@ -11,7 +11,7 @@ import FilteredItems from "../Components/FilteredItems";
 import allData from '../data/amazon_uk_shoes_dataset.json'
 import Pagination from "../Components/Pagination";
 import Navbar from "../Components/Navbar";
-import hero from '../assets/nike.png'
+import hero from '../assets/Nike.png'
 
 
 const FilteredProducts = () => {
