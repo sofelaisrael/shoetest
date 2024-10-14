@@ -6,7 +6,7 @@ import { addToCart } from "../features/cartSlice";
 import { addToWishList } from "../features/wishListSlice";
 import data from '../data/amazon_uk_shoes_dataset.json'
 import Product from "../Components/Product";
-import hero from '../assets/puma.png'
+import hero from '../assets/Puma.png'
 
 const SingleProduct = () => {
     const dispatch = useDispatch();
