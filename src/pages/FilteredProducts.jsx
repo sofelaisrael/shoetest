@@ -5,7 +5,7 @@ import { filterAll } from "../features/productSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from 'react-router-dom';
 import Filtered from '../Components/Filtered';
-import FilterInput from '../Components/filterInput';
+import FilterInput from '../Components/FilterInput';
 import SliderRange from '../Components/SliderRange';
 import FilteredItems from "../Components/FilteredItems";
 import allData from '../data/amazon_uk_shoes_dataset.json'
