@@ -1,19 +1,14 @@
 import { AiFillInstagram } from "react-icons/ai"; 
 import { AiFillTwitterCircle } from "react-icons/ai"; 
 import { BsFacebook } from "react-icons/bs"; 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const Footer = () => {
-    const [Year, setYear] = useState();
-    useEffect(() => {
-        const getYear = () => setYear(new Date().getFullYear());
-        getYear();
-    }, []);
     return (
         <div className=" p-20 max-md:p-5 footer-main bg-[#26292E] text-[#f6f6f6] ">
             <div className="grid grid-cols-4 max-md:grid-cols-2 max-lg:grid-cols-3 gap-10 place-content-center  ">
                 <div className="item col-span-2 flex flex-col gap-5 font-bold">
-                    <div className="text-[48px] ">
+                    <div className="text-[48px] titletext">
                         Shoe-z
                     </div>
                     <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptate quo laborum quaerat inventore provident mollitia nihil nulla vitae repudiandae soluta distinctio reprehenderit nesciunt vel iste, voluptates nobis facilis. Nihil.</p>

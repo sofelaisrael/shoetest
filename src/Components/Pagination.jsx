@@ -22,19 +22,20 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
 
     return (
         <ul className="pagination w-full">
-            <li onClick={handlePrevClick} style={{ cursor: currentPage === 1 ? 'not-allowed' : 'pointer', display: currentPage === 1 ? 'none' : 'flex'  }}>
+            <li onClick={handlePrevClick} className={`${currentPage === 1 ? 'cant': 'can'}`} style={{ cursor: currentPage === 1 ? 'not-allowed' : 'pointer' }}>
                 <CgChevronLeft />
             </li>
             {Array.from({ length: endPage - startPage + 1 }, (_, index) => (
                 <li
                     key={startPage + index}
+                    
                     onClick={() => onPageChange(startPage + index)}
-                    className={currentPage === startPage + index ? 'active' : ''}
+                    className={`${currentPage === startPage + index ? 'active' : ''} can `}
                 >
                     {startPage + index}
                 </li>
             ))}
-            <li onClick={handleNextClick} style={{ cursor: currentPage === totalPages ? 'not-allowed' : 'pointer', display: currentPage === totalPages ? 'none' : 'flex' }}>
+            <li onClick={handleNextClick} className={`${currentPage === totalPages ? 'cant': 'can'}`} style={{ cursor: currentPage === totalPages ? 'not-allowed' : 'pointer'}}>
                 <CgChevronRight />
             </li>
         </ul>

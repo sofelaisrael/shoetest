@@ -1,13 +1,20 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import slideReducer from "../features/sliderSlice";
-import productsReducer from "../features/productSlice";
-import cartReducer from "../features/cartSlice";
-import wishListReducer from "../features/wishListSlice";
+import { getFirebase } from "react-redux-firebase";
+import { getFirestore } from "redux-firestore";
+import cartSlice from "../features/cartSlice";
+import wishListSlice from "../features/wishListSlice";
+import productSlice from "../features/productSlice";
 
 export const store = configureStore({
   reducer: {
-    products: productsReducer,
-    cart: cartReducer,
-    wishlist: wishListReducer,
+    products: productSlice,
+    cart: cartSlice,
+    wishlist: wishListSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        extraArgument: { getFirebase, getFirestore },
+      },
+    })
 });

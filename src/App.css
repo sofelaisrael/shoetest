@@ -356,11 +356,11 @@ input[type="range"]:active::-webkit-slider-thumb {
     align-items: center;
 }
 
-.pagination li {
+.pagination .can, .pagination .cant {
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid #3f3f3f;
     width: 40px;
-    color: #ccc;
+    color: #3f3f3f;
     font-size: 24px;
     justify-self: self-end;
     align-self: flex-end;
@@ -370,8 +370,12 @@ input[type="range"]:active::-webkit-slider-thumb {
     justify-content: center;
     align-items: center;
 }
+.pagination .cant{
+    border: 1px solid #d6d6d6;
+color: #d6d6d6;
+}
 
-.pagination li:hover {
+.pagination .can:hover {
     color: #EB3E32;
     border-color: #EB3E32;
 }
@@ -606,4 +610,55 @@ input[type="range"]:active::-webkit-slider-thumb {
 .item:hover > img{
     scale: 1.4;
     filter: blur(10px);
+}
+
+
+
+.contain{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contain2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ripple {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+    transform: translate(-50%, -50%) rotateX(100deg) scale(7);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* animation: ripple 4s linear infinite; */
+    background-color: #000;
+    /* rotate: -5deg 100deg; */
+    /* scale: 5; */
+}
+
+.r2{
+    width: 80px;
+    height: 80px;
+    /* opacity: 0.8;     */
+}
+.r3{
+    width: 120px;
+    height: 120px;
+    opacity: 0.6;
+}
+.r4{
+    width: 160px;
+    height: 160px;
+    opacity: 0.4;
+}
+.r5{
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
 }

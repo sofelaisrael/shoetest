@@ -1,9 +1,5 @@
-import { AiFillHeart } from "react-icons/ai";
-import { IoCartOutline } from "react-icons/io5";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { singleProduct } from "../features/productSlice";
 import React from 'react'
-import { addToCart } from "../features/cartSlice";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -12,18 +8,11 @@ const Product = ({ data }) => {
 
     const defdata = data
 
-    
-    const getLastPrice = (price) => {
-        const last = price.lastIndexOf('£')
-        return price.slice(last + 1)
-    }
-
     return (
         <Link to={`/filteredProducts/${defdata.asin}`}  className="col-span-1 border rounded-lg p-2">
             <div className="product-item w-[100%] mx-auto">
                 <div className="inner-content relative">
                     <div className="product-thum relative h-[150px] overflow-hidden" onClick={() => {
-                        // location.reload()
                          dispatch(singleProduct(defdata.asin));
                     }}>
                         <Link to={`/filteredProducts/${defdata.asin}`}>

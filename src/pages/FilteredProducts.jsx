@@ -3,14 +3,11 @@ import { TfiFilter } from "react-icons/tfi";
 import React, { useEffect, useState } from 'react'
 import { filterAll } from "../features/productSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from 'react-router-dom';
-import Filtered from '../Components/Filtered';
 import FilterInput from '../Components/FilterInput';
 import SliderRange from '../Components/SliderRange';
 import FilteredItems from "../Components/FilteredItems";
 import allData from '../data/amazon_uk_shoes_dataset.json'
 import Pagination from "../Components/Pagination";
-import Navbar from "../Components/Navbar";
 import hero from '../assets/Nike.png'
 
 
@@ -18,11 +15,9 @@ const FilteredProducts = () => {
     const dispatch = useDispatch()
     const [mini, setMini] = useState(0)
     const [max, setMax] = useState(500)
-    const [filt, setFilt] = useState('')
     const [cate, setCate] = useState('(Any)')
     const [brds, setBrds] = useState('(Any)')
     const products = useSelector((state) => state.products.filteredProducts);
-    const result = useSelector((state) => state.products.results);
     const [brands, setBrands] = useState([])
     const [breadcrumbs, setBreadcrumbs] = useState([])
 
@@ -46,7 +41,6 @@ const FilteredProducts = () => {
     useEffect(() => {
         let onearr = []
         allData.map(prod => {
-            // prod.breadcrumbs.split('Shoes/').slice(1)
 
             prod.breadcrumbs.split('Shoes/').slice(1).map(sh => {
                 if (sh.includes('/')) {
@@ -107,7 +101,6 @@ const FilteredProducts = () => {
             </div>
             <div className="grid grid-cols-7 max-lg:flex  max-lg:flex-col-reverse pb-10 ">
                 <div className="filters px-10 col-span-2 max-lg:h-full flex flex-col justify- py-10 gap-2 items-center ">
-                    {/* <h4 class="sidebar">Top Categories</h4> */}
                     <FilterInput data={breadcrumbs} setArr={setCate} name='Category' content='content1' select='select1' />
                     <FilterInput data={brands} setArr={setBrds} content='content2' select='select2' name='Brand' />
                     <SliderRange min={0} max={500} onChange={({ min, max }) => {
@@ -154,21 +147,7 @@ const FilteredProducts = () => {
                         </div>
                     )
                 }
-
-
-
-                {/* <div id="data-container"></div>
-                <ul className="pagination" id="pagination"></ul>
-
-                <div className="grid grid-cols-3 place-content-evenly gap-10 p-10 col-span-5">
-                    <FilteredItems />
-                    <FilteredItems />
-                    <FilteredItems />
-                    <FilteredItems />
-                    <FilteredItems />
-                    <FilteredItems />
-
-                </div> */}
+                
             </div>
 
 

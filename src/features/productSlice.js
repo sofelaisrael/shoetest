@@ -36,7 +36,6 @@ export const productSlice = createSlice({
                 }
 
                 const newSHoes = data.filter((shoe) => {
-                    // console.log(hasStore(shoe.brand).toUpperCase());
 
                     if (shoe.price !== null &&
                         hasStore(shoe.brand).toUpperCase() === action.payload.brand.toUpperCase() &&
